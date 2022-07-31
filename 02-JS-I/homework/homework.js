@@ -159,18 +159,25 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  
+  let potenciaAlCuadrado;
+    potenciaAlCuadrado =Math.pow(num,2);
+  return potenciaAlCuadrado;
 }
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  
+  let potenciaAlCubo;
+  potenciaAlCubo =Math.pow(num,3);
+  return potenciaAlCubo;
 }
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
+  let potencia;
+  potencia=Math.pow(num,exponent);
+  return potencia;
   
 }
 
