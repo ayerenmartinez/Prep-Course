@@ -184,19 +184,25 @@ function elevar(num, exponent) {
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  
+  let redondearNumero;
+  redondearNumero = Math.round(num);
+  return redondearNumero;
 }
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  
+  let redondearHaciaArriba;
+  redondearHaciaArriba = Math.ceil(num);
+  return redondearHaciaArriba;
 }
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  
+  let numeroRamdom;
+  numeroRamdom =Math.random();
+  return numeroRamdom;
 }
 
 function esPositivo(numero) {
@@ -204,7 +210,17 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  
+  let resultado;
+    if(numero==0){
+      resultado =false;
+    }else{
+      if(numero>0){
+        resultado="Es positivo";
+      }else{
+        resultado="Es negativo";
+      }
+    }
+  return resultado;
 }
 
 function agregarSimboloExclamacion(str) {
