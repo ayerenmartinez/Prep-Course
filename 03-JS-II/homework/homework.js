@@ -18,6 +18,7 @@ function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
+  let mayoriaDeEdad;
   if(edad>=18){
     mayoriaDeEdad ="Allowed";
   }else{
@@ -81,34 +82,98 @@ function saludo(idioma) {
 
 function colors(color) {
   //La función recibe un color. Devolver el string correspondiente:
-  //En caso que el color recibido sea "blue", devuleve --> "This is blue"
-  //En caso que el color recibido sea "red", devuleve --> "This is red"
-  //En caso que el color recibido sea "green", devuleve --> "This is green"
-  //En caso que el color recibido sea "orange", devuleve --> "This is orange"
+  //En caso que el color recibido sea "blue", devuelve --> "This is blue"
+  //En caso que el color recibido sea "red", devuelve --> "This is red"
+  //En caso que el color recibido sea "green", devuelve --> "This is green"
+  //En caso que el color recibido sea "orange", devuelve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
+  let colors;
+  switch(color){
+    case 'blue':{
+      colors ="This is blue";
+      break;
+    }
+    case 'red':{
+      colors ="This is red";
+      break;
+    }
+    case 'green':{
+      colors="This is green";
+      break;
+    }
+    case 'orange':{
+      colors="This is orange";
+      break;
+    }
+    default:{
+      colors="Color not found";
+      break;
+    }
+  }
+  return colors;
 }
 
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
+  let esDiezOCinco;
+  if(numero==10 || numero==5){
+    esDiezOCinco =true;
+  }else{
+    esDiezOCinco =false;
+  }
+  return esDiezOCinco;
 }
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
+  let estaEnRango;
+    if(numero<50 && numero>20){
+      estaEnRango=true;
+    }else{
+      estaEnRango=false;
+    }
+  return estaEnRango;
 }
 
 function esEntero(numero) {
   // Devuelve "true" si "numero" es un entero (int/integer)
-  // Ejemplo: 0.8 -> false
+  // Ejemplo: 0.8 -> false   
+  // Ejemplo: 5.6 -> false 5.6 --> redondeando al menor posible seria 5 ->(num - numRedondeado) (5.6 - 5) =0.6 por lo que es false
   // Ejemplo: 1 -> true
   // Ejemplo: -10 -> true
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
+  let esEntero;
+  let numeroRedondeado;
+  numeroRedondeado = Math.floor(numero);
+    if(numero - numeroRedondeado==0){
+      esEntero=true;
+    }else{
+      esEntero=false;
+    }
+  return esEntero;
+
+
+  //otra forma
+  /*
+  function esEntero(numero){
+    if (isNaN(numero)){//comprobar si es un numero
+        alert ("Ups... " + numero + " no es un número.");
+    } else {
+        if (numero % 1 == 0) {
+            alert ("Es un numero entero");
+        } else {
+            alert ("Es un numero decimal");
+        }
+    }
+}
+*/
 }
 
 function fizzBuzz(numero) {
@@ -116,6 +181,24 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
+  let fizzBuzz;
+  
+  if(numero%3==0 && numero%5==0){
+    fizzBuzz ="fizzbuzz";
+  }else{
+    if(numero%3==0){
+      fizzBuzz="fizz";
+    }else{
+      if(numero%5==0){
+        fizzBuzz="buzz";
+      }else{
+        fizzBuzz=numero;
+      }
+    }
+  }
+  
+  
+  return fizzBuzz;
 }
 
 function operadoresLogicos(num1, num2, num3) {
