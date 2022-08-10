@@ -141,7 +141,7 @@ describe('diaDeLaSemana(numeroDeDia)', function() {
 
 describe('empiezaConNueve(n))', function() {
   it('should return true or false in case the received number starts with nine', function() {
-    expect(empiezaConNueve(98)).toBe(true);
+    expect(empiezaConNueve(980)).toBe(true);
     expect(empiezaConNueve(9)).toBe(true);
     expect(empiezaConNueve(2)).toBe(false);
     expect(empiezaConNueve(7)).toBe(false);
